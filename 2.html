@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	window.onload = function(){
+		//所有的网页加载完毕，包括图片 外部资源 等等    才叫网页加载完毕
+		alert('DOM树加载完毕，并且外部资源加载完毕');	
+	}
+	
+	//DOM树加载完毕。外部资源不管我的事情
+	if(document.addEventListener()){
+		//DOM 完全加载完毕，就会自动触发这个事件
+		document.addEventListener("DOMContentLoaded",DOMContentLoaded,false);
+		
+		function DOMContentLoaded(){
+			alert('DOM树加载完毕');	
+			
+		}	
+	}
+</script>
+</head>
+
+<body>
+</body>
+</html>
